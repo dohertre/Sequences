@@ -202,6 +202,22 @@ def run_test_count_short_ones():
 
     # TO DO 4 (continued):  Add your 2 ADDITIONAL test(s) here:
 
+    # Test 8:
+    expected = 3
+    seq = [[], [], []]
+    actual = count_short_ones(seq)
+    print()
+    print('Test 8 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 9:
+    expected = 2
+    seq = [[1, 3, 5, 7, 9], [1, 1, 1], [1, 2]]
+    actual = count_short_ones(seq)
+    print()
+    print('Test 9 expected:', expected)
+    print('       actual:  ', actual)
+
 
 def count_short_ones(seq_of_lists):
     """
@@ -305,10 +321,16 @@ def draw_circles(window, points, radius, color):
       :type color: str
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
+    for k in range(len(points)):
+        circle = rg.Circle(points[k], radius)
+        circle.fill_color = color
+        circle.attach_to(window)
+
+    window.render()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
