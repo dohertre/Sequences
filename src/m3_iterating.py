@@ -118,8 +118,8 @@ def count_negatives(seq):
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     total = 0
-    for k in seq:
-        if k <= 0:
+    for k in range(len(seq)):
+        if seq[k] <= 0:
             total = total + 1
     return total
 
