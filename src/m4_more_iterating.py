@@ -624,14 +624,14 @@ def run_test_sum_first_n():
 
     # TO DO 8 (continued):  Add your 2 ADDITIONAL tests here:
     # Test 8:
-    expected = 38
+    expected = -56
     actual = sum_first_n([54, -110, 2, 57], 2)
     print()
     print('Test 8 expected:', expected)
     print('       actual:  ', actual)
 
     # Test 9:
-    expected = 38
+    expected = 0
     actual = sum_first_n([41, 100, 30, 45], 0)
     print()
     print('Test 9 expected:', expected)
@@ -641,7 +641,7 @@ def run_test_sum_first_n():
 def sum_first_n(numbers, n):
     """
     What comes in:
-      -- An sequence of numbers.
+      -- A sequence of numbers.
       -- A nonnegative integer   n   that is less than or equal to
            the length of the given sequence.
     What goes out:
@@ -660,7 +660,7 @@ def sum_first_n(numbers, n):
       :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
@@ -673,7 +673,7 @@ def sum_first_n(numbers, n):
     if n == 0:
         total = 0
     else:
-        for k in range(0, numbers[n]):
+        for k in range(0, n):
             total = total + numbers[k]
     return total
 # ----------------------------------------------------------------------
