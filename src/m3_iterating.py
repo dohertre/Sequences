@@ -211,7 +211,7 @@ def run_test_count_short_ones():
     print('       actual:  ', actual)
 
     # Test 9:
-    expected = 2
+    expected = 1
     seq = [[1, 3, 5, 7, 9], [1, 1, 1], [1, 2]]
     actual = count_short_ones(seq)
     print()
@@ -243,7 +243,11 @@ def count_short_ones(seq_of_lists):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
-
+    total = 0
+    for k in range(len(seq_of_lists)):
+        if len(seq_of_lists[k]) < 3:
+            total = total + 1
+    return total
 
 def run_test_draw_circles():
     """ Tests the   draw_circles   function. """
